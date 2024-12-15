@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  font-family: "Poppins", sans-serif;
+}
+
+body::-webkit-scrollbar {
+ display: none; /* For Chrome, Safari, and Opera */
+}
+
+a{
+  text-decoration: none;
+}
+
+::selection{
+   background-color: black;
+   color: white;
+} 
+
+  .nav-link{
+  margin-left: 5.5rem;
+  margin-top: 5px;
+  display: flex-end;
+  transition: 0.3s;
+ }
+
+ .ccontainer button{
+  background-color: transparent;
+  border: 0px;
+  border-radius: 50px;
+  color: #fff;
+  margin-top: 70px;
+  padding: 5px 20px 5px 20px; 
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: lighter;
+ }
+
+ .ccontainer button:hover{
+  background-color: rgba(255, 255, 255, 0.1);
+ }
+
+ .ccontact {
+  width: 100%;
+  overflow: hidden;
+  position: relative; /* Add this */
+  z-index: 1;
+  
+  /* Add this */
+}
+
+.ccontact .ccontainer {
+  height: 100%;
+  min-height: 775px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  position: relative; /* Add this */
+  z-index: 2; /* Add this */
+}
+
+ .ccontact .ccontainer > div{
+  grid-column: 1/2;
+  grid-row: 1/2;
+ }
+
+ .cleft{
+  /*   */
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 1rem ;
+  padding: 30px 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  position: relative;
+  z-index: 3;
+ }
+
+ .ccontact-heading h1{
+  font-weight: 100;
+  color: white;
+  font-size: 2.5rem;
+  line-height: 0.8;
+  white-space: nowrap;
+  margin-bottom: 1.2rem;
+ }
+
+ body > main > div > div > div.left > div > div > p{
+  padding-bottom: 25px;
+ }
+
+ .ccontact-heading .span{
+  color: rgb(193, 240, 99);
+ }
+
+ .ctext{
+  color: #acacac;
+ }
+
+ .ctext a{
+  transition: 0.3s;
+ }
+
+ .ctext a:hover{
+  color: #72d2d3;
+ }
+
+ .cforms-wrapper{
+  max-width: 32rem;
+ }
+
+ .ccontact-form {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.cinput-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.cinput-wrap {
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #888;
+  pointer-events: none;
+}
+
+.contact-input {
+  width: 100%;
+  padding: 1rem;
+  background-color: #f1faff;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #333;
+  transition: all 0.3s;
+}
+
+.contact-input:hover{
+  background-color: #eaffc0;
+}
+
+.ccontact-input:focus {
+  outline: none;
+  padding-top: 1rem;
+  border-color: #d0ff96;
+  box-shadow: 0 0 0 3px rgba(228, 255, 185, 0.3);
+  background-color: #e6f7ff; /* New background color when focused */
+}
+
+.cinput-wrap label {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  color: #888;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.contact-input:focus + label,
+.contact-input:not(:placeholder-shown) + label {
+  top: -1.4rem;
+  left: 0.5rem;
+  font-size: 0.8rem;
+  /* background-color: white; */
+  padding: 0 0.5rem;
+  color: #b8ff61;
+}
+
+textarea.contact-input {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.ccontact-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: -4rem;
+}
+
+.btn {
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-upload {
+  background-color: yellow;
+  color: black;
+}
+
+.btn-send {
+  background-color: red;
+  color: white;
+}
+
+.btn-upload {
+  background-color: #0077ff;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-upload:hover {
+  background-color: #0056b3;
+}
+
+.btn-upload input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.cright {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+  pointer-events: auto; /* Enable pointer events for the container */
+}
+
+.cimage-wrapper {
+  position: relative;
+  grid-column: 2;
+}
+
+.cimage-wrapper a {
+  pointer-events: auto; /* Ensure pointer events for the anchor are enabled */
+  text-decoration: none; /* Remove underline from the link */
+}
+
+.cimage-wrapper .image {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintains the image aspect ratio */
+  position: relative;
+  display: inline; /* Keeps the image inline */
+}
+
+
+
+.cwave-wrap{
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ top: 0;
+ right: 100%;
+ background: rgb(30, 61, 89);
+ background: linear-gradient(
+   90deg,
+   rgba(30, 61, 89, 1) 0%,
+   rgba(134, 172, 177, 1) 100%
+ );
+}
+
+.cwave-wrap svg{
+ position: absolute;
+ /* background-color: #0077ff; */
+ height: calc(100% + 10px);
+ top: 50%;
+ transform: translateY(-50%);
+ left: calc(98% - 2px);
+}
+
+#wave{
+ fill: #86acb1;
+ height: 100%;
+}
+
+.dashed-wave{
+ position: absolute;
+ /* background-color: rebeccapurple; */
+ z-index: 3;
+ height: 130%;
+ bottom: 55%;
+ left: -28px;
+ transform: translateY(50%);
+}
+
+#dashed-wave{
+ fill: none;
+ stroke: rgb(193, 240, 99);
+ stroke-width: 2px;
+ stroke-dasharray: 6.5;
+ opacity: 0.8;
+}

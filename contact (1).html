@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="style2.css" />
+    <!-- used fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "pS9N6JWuqXNT-Fxta",
+        });
+      })();
+    </script>
+    <script src="script5.js"></script>
+  </head>
+  <body>
+    
+    <main>
+      <div class="ccontact">
+        <div class="ccontainer">
+          <div class="cleft" style="margin-left: 100px">
+            <div class="cform-wrapper">
+              <div class="ccontact-heading">
+                <h1>Let's get in touch!</h1>
+                <p class="ctext">
+                  Or leave us a message on:
+                  <span
+                    ><a class="span" href="https://www.instagram.com/vividhra/"
+                      >Our Instagram.
+                    </a></span
+                  >
+                </p>
+              </div>
+              <form
+                class="ccontact-form"
+                action="https://formsubmit.co/vividhra@gmail.com"
+                method="POST"
+                onsubmit="return validateForm();"
+              >
+                <div class="cinput-group">
+                  <div class="cinput-wrap">
+                    <input
+                      type="text"
+                      class="contact-input"
+                      id="name"
+                      name="name"
+                      placeholder=" "
+                      required
+                    />
+                    <label for="name">Name</label>
+                    <i class="icon fa-solid fa-address-card"></i>
+                  </div>
+                  <div class="cinput-wrap">
+                    <input
+                      type="number"
+                      class="contact-input"
+                      id="Contact"
+                      name="contact"
+                      placeholder=" "
+                      required
+                    />
+                    <label for="Contact">Contact</label>
+                    <i class="icon fa-solid fa-address-card"></i>
+                  </div>
+                </div>
+                <div class="cinput-wrap">
+                  <input
+                    type="email"
+                    class="contact-input"
+                    id="email"
+                    name="email"
+                    placeholder=" "
+                    required
+                  />
+                  <label for="email">Email</label>
+                  <i class="icon fa-solid fa-envelope-open"></i>
+                </div>
+                <div class="cinput-wrap">
+                  <textarea
+                    class="contact-input"
+                    id="message"
+                    name="message"
+                    placeholder=" "
+                    required
+                  ></textarea>
+                  <label for="message">Message</label>
+                  <i class="icon fa-solid fa-quote-left"></i>
+                </div>
+                <div class="ccontact-buttons">
+                  <button
+                    type="submit"
+                    class="btn btn-send"
+                    style="
+                      font-weight: 400;
+                      border: 1px solid white;
+                      padding: 5px;
+                    "
+                  >
+                    <i class="fa-regular fa-paper-plane"></i>
+                    Send Message
+                  </button>
+                </div>
+
+                <!-- Hidden inputs for FormSubmit -->
+                <input type="hidden" name="_captcha" value="false" />
+              </form>
+            </div>
+          </div>
+          <div class="cright">
+            <div class="cimage-wrapper">
+              <img src="pics/map.png" class="image" />
+              <div class="cwave-wrap">
+                <svg
+                  class="wave"
+                  viewBox="0 0 783 1536"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    id="wave"
+                    d="M236.705 1356.18C200.542 1483.72 64.5004 1528.54 1 1535V1H770.538C793.858 63.1213 797.23 196.197 624.165 231.531C407.833 275.698 274.374 331.715 450.884 568.709C627.393 805.704 510.079 815.399 347.561 939.282C185.043 1063.17 281.908 1196.74 236.705 1356.18Z"
+                  />
+                </svg>
+              </div>
+              <svg
+                class="dashed-wave"
+                width="345"
+                height="877"
+                viewBox="0 0 345 877"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  id="dashed-wave"
+                  d="M0.5 876C25.6667 836.167 73.2 739.8 62 673C48 589.5 35.5 499.5 125.5 462C215.5 424.5 150 365 87 333.5C24 302 44 237.5 125.5 213.5C207 189.5 307 138.5 246 87C185 35.5 297 1 344.5 1"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- font awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"></script>
+    <!-- script -->
+    <script src="script2.js"></script>
+  </body>
+</html>

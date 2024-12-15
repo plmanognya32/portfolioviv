@@ -1,0 +1,341 @@
+/* Global Styles */
+/* Global Styles */
+html, body {
+    height: 100%; /* Ensure the gradient covers the full height */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default paddings */
+    overflow-x: hidden; /* Prevent horizontal scroll bar */
+    overflow-y: scroll;
+    scrollbar-width: none;
+    color: #333;
+    line-height: 1.6;
+    width: 100%; /* Ensure it fits within the viewport */
+    box-sizing: border-box; /* Include padding and border in width/height calculations */
+    
+}
+html::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in WebKit-based browsers */
+}
+
+/* Ensure all elements respect box-sizing */
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Adjust images and other media to fit within the container */
+img, video {
+    max-width: 100%; /* Prevent images from overflowing */
+    height: auto;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* Page Content */
+#page3 {
+   margin-top: 5%;
+   width: 100%;
+}
+#page3top h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #ffffff;
+}
+
+
+
+#page6elements {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 0;
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+    justify-content: space-evenly;
+}
+
+#page6elements .service-card {
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    background-color: #A1C9C8;
+    border-radius: 10px 40px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#page6elements .service-card img {
+    width: 100%;
+    max-width: 200px; /* Set the maximum width */
+    height: 200px; /* Set the height for uniformity */
+    object-fit: cover; /* Ensure the image fills the box and maintains its aspect ratio */
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#page6elements .service-card:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#page6elements .service-card p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #013220;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    #page6elements {
+        flex-direction: column; /* Stack the services vertically on smaller screens */
+        gap: 20px;
+    }
+}
+
+#page6elements img {
+    max-width: 150px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#page6elements img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#page6elements p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0px;
+    padding: 20px;
+}
+
+/* Card General Styles */
+.card {
+    perspective: 1000px;
+    width: 380px;
+    height: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.147);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Card Flip Effect */
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Card Front and Back */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Card Front Styles */
+.card-front {
+    background: rgba(251, 251, 251, 0.589);
+    backdrop-filter: blur(6px);
+    transition: all 0.5s ease;
+    text-align: center;
+    color: #333;
+}
+
+.card-front img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: scale-down;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ffffff; /* Optional: Matches the theme */
+}
+
+.card-front h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #087023; /* Green tone for text */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Card Back Styles */
+.card-back {
+    background: #ecf0f1;
+    color: #2c3e50;
+    transform: rotateY(180deg);
+    text-align: center;
+    padding: 20px;
+}
+
+.card-back h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-back p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    max-width: 90%;
+    margin: 10px 0;
+}
+
+/* Optional: Button on the Back */
+.card-back button.flip-back-button {
+    display: none; /* Remove this if you want a button for additional interaction */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+        height: auto;
+    }
+
+    .card-front img {
+        max-width: 100%;
+        max-height: 200px;
+    }
+}
+
+
+/* Intro Section */
+.intro-section-floating {
+    background: #e8f5e9;
+    padding: 20px;
+    border-radius: 10px 30px;
+    margin: 20px auto;
+    max-width: 900px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    text-align: center;
+}
+
+.intro-section-floating .intro-text {
+    font-size: 18px;
+    color: #444;
+}
+
+/* Footer Styles */
+footer {
+    padding: 3px 5px; /* Reduced padding to shrink height */
+    text-align: center;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    border-radius: 0; /* No rounded corners for full-width footer */
+    position: relative; /* Allows the footer to remain in normal flow */
+    bottom: 0;
+}
+
+/* Social Media Icons */
+footer .social_icon {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Reduced gap between icons */
+    margin-bottom: 10px; /* Reduced bottom margin */
+}
+
+footer .social_icon li a {
+    color: #ffffff; /* Dark color for icons */
+    font-size: 20px; /* Slightly smaller icon size */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social_icon li a:hover {
+    color: #90ee90; /* Light green hover color */
+    transform: scale(1.1); /* Slight scale on hover */
+}
+
+/* Footer Navigation Menu */
+footer .menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Reduced gap between menu items */
+    margin: 5px 0;
+}
+
+footer .menu li a {
+    color: #ffffff; /* Dark color for text */
+    font-size: 14px; /* Slightly smaller font size */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .menu li a:hover {
+    color: #90ee90; /* Light green hover color */
+}
+
+/* Footer Bottom Text */
+footer .footer-bottom {
+    margin-top: 10px; /* Reduced top margin */
+    font-size: 12px; /* Slightly smaller font size */
+    color: #7f8c8d; /* Lighter gray text for subtle footer text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    footer .social_icon {
+        flex-direction: column;
+        gap: 8px; /* Reduced gap in smaller screens */
+    }
+
+    footer .menu {
+        flex-direction: column;
+        gap: 8px; /* Reduced gap in smaller screens */
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+
+    #page6elements {
+        flex-direction: column;
+    }
+}

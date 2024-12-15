@@ -1,0 +1,729 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+
+  overflow-y: auto;
+  overflow-x: auto;
+  font-family: "Poppins", sans-serif;
+  background: rgb(30, 61, 89);
+  background: linear-gradient(
+    90deg,
+    rgba(30, 61, 89, 1) 0%,
+    rgba(134, 172, 177, 1) 100%
+  );
+}
+html::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in WebKit-based browsers */
+}
+
+#page2,
+#page3 {
+  background: rgb(30, 61, 89);
+  background: linear-gradient(
+    90deg,
+    rgba(30, 61, 89, 1) 0%,
+    rgba(134, 172, 177, 1) 100%
+  );
+}
+#page1,
+#page2,
+#page3 {
+  overflow: hidden;
+}
+
+::selection {
+  background-color: black;
+  color: white;
+}
+
+#main {
+  position: relative;
+  /* overflow: hidden; */
+}
+
+#page1 {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#page1 video {
+  width: 100%;
+  
+  filter: brightness(95%);
+  will-change: transform;
+  z-index: 0;
+  top: 0%;
+}
+
+#page3 {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 0%;
+}
+
+#page1 #bottompage1 {
+  z-index: 1;
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  color: white;
+  height: 40vh;
+  width: 40vw;
+}
+
+#part2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-size: 80px;
+}
+
+#part1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-size: 25px;
+  margin-top: 5px;
+}
+
+#bottompage1 #innertext {
+  position: absolute;
+  bottom: 0%;
+  height: 40%;
+  width: 100%;
+}
+
+h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+  padding-left: 4px;
+  margin-top: -20px;
+}
+
+#bottompage1 #innertext button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 50px;
+  background-color: #2632565f;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-size: 17px;
+  width: 150px;
+  height: 45px;
+}
+
+#bottompage1 #innertext button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+
+#knwbtn:hover {
+  background-color: #eee;
+}
+
+/* Mobile Responsive (Under 768px) */
+@media only screen and (max-width: 768px) {
+  #page1 {
+    height: 100%;
+  }
+
+  #page1 video {
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  #bottompage1 {
+    bottom: 5%;
+    left: 5%;
+    width: 90%; /* Adjust width to fit better on smaller screens */
+    height: auto;
+    text-align: center; /* Center-align content for mobile */
+  }
+
+  #part1 {
+    font-size: 18px; /* Reduce font size for better readability on mobile */
+    margin-top: 10px;
+  }
+
+  #part2 {
+    font-size: 40px; /* Reduce font size for mobile */
+  }
+
+  #bottompage1 #innertext {
+    position: relative;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  h4 {
+    font-size: 16px; /* Smaller font size for mobile */
+    padding-left: 0;
+    margin-top: 10px;
+  }
+
+  #bottompage1 #innertext button {
+    width: 120px; /* Adjust button width for mobile */
+    height: 40px; /* Adjust button height for mobile */
+    font-size: 14px; /* Smaller button text for mobile */
+  }
+
+  #knwbtn:hover {
+    background-color: #eee;
+  }
+}
+
+#page2 {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 100vh;
+  width: 100vw;
+  background-color: grey;
+  color: white;
+  background: rgb(30, 61, 89);
+  background: linear-gradient(
+    90deg,
+    rgba(30, 61, 89, 1) 0%,
+    rgba(134, 172, 177, 1) 100%
+  );
+}
+
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.65;
+}
+
+#textarea {
+  margin-top: 200px;
+  width: 650px;
+  height: 500px;
+  z-index: 2;
+}
+
+#textarea h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  color: white;
+  padding-bottom: 15px;
+}
+
+#textarea h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  color: white;
+  font-size: 30px;
+}
+
+#polaroid {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  perspective: 1000px;
+  z-index: 2;
+}
+
+.carousel {
+  position: absolute;
+  margin-top: 150px;
+  width: 100%;
+  height: 100%;
+}
+
+.polaroid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 500px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.8s, transform 0.8s ease-in-out;
+}
+
+.polaroid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.hidden.left {
+  transform: translate(-150%, -50%) rotate(-30deg);
+}
+
+.hidden.right {
+  transform: translate(150%, -50%) rotate(30deg);
+}
+
+/* Mobile Responsive (Under 768px) */
+@media only screen and (max-width: 768px) {
+  #page2 {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #background-video {
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  #textarea {
+    margin-top: 50px;
+    width: 90%; /* Adjust width for mobile */
+    height: auto; /* Adjust height */
+  }
+
+  #textarea h2 {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+
+  #textarea h1 {
+    font-size: 18px; /* Adjust font size for smaller screens */
+    line-height: 1.5; /* Adjust line spacing for better readability */
+  }
+
+  #polaroid {
+    width: 80%; /* Reduce width for mobile */
+    height: 350px; /* Adjust height */
+    margin-top: 20px;
+  }
+
+  .polaroid {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transform: translate(0, 0); /* Remove rotation for mobile */
+  }
+
+  .carousel {
+    margin-top: 0;
+  }
+
+  .polaroid img {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  #page3elements {
+    flex-direction: column;
+  }
+  #page31.container {
+    flex-direction: column;
+  }
+}
+
+#page3 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+
+  padding: 3vw;
+}
+
+#page3top {
+  /* background-color: antiquewhite; */
+  text-align: center;
+}
+
+.grouptext p {
+  color: #fff;
+}
+
+#page3top h4 {
+  margin-bottom: 25px;
+  margin-top: 15px;
+  font-size: 15px;
+  font-weight: 400;
+  color: white;
+}
+
+#page3top h2 {
+  font-size: 3.5vw;
+  font-family: "Poppins", sans-serif;
+  font-weight: lighter;
+  color: white;
+}
+
+/* Fade-up animation keyframes */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Initially, the text will be hidden */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px); /* Hidden below the original position */
+  transition: opacity 1s, transform 1s; /* Smooth transition */
+}
+
+/* Class added when the element becomes visible */
+.fade-up-visible {
+  opacity: 1;
+  transform: translateY(0); /* Move to its original position */
+}
+
+
+#page3elements {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* margin-top: 5vw;  */
+  /* background-color: cornsilk; */
+}
+
+#page3elements .boxedelements {
+  position: relative; /* Make this container a reference point for absolutely positioned children */
+  height: 100%;
+  width: 31.5%;
+  background-color: black;
+  overflow: hidden; /* Ensure no overflow beyond the container */
+  border-radius: 20px;
+}
+
+#page3elements .boxedelements video,
+#page3elements .boxedelements img {
+  position: absolute; /* Ensure both elements are positioned absolutely within their container */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Make sure both video and image fill the container properly */
+  object-position: center;
+}
+
+#page3elements .boxedelements img {
+  z-index: 1; /* Ensure the image is on top of the video */
+  opacity: 0.7;
+  transition: all linear 1s;
+}
+
+#page3elements .boxedelements p {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: 200;
+  font-family: "Poppins", sans-serif;
+  opacity: 1;
+  margin: 0;
+  pointer-events: none;
+  transition: all linear 1s;
+  /* background-color: black;
+   padding: 10px 30px;
+   border-radius: 50px; */
+}
+
+#page3elements .boxedelementspro {
+  position: relative;
+  height: 100%;
+  width: 31.5%;
+  background-color: black;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+#page3elements .boxedelementspro img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+#page3elements .boxedelementspro p {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: 200;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  pointer-events: none;
+}
+
+#page31 h1 {
+  color: #fff;
+  text-align: left;
+  font-size: 36px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-bottom: 50px;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+.container .content {
+  color: #fff;
+  line-height: 1.75;
+  width: 600px;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  text-align: justify;
+}
+
+.line {
+  transform: translateY(20px);
+  transition: all 1s ease-out;
+  margin-bottom: 20px; /* Add some space between lines */
+}
+
+.line:hover {
+  transform: scale(1.1); /* Slight upward shift and enlarge */
+  /* Optional: Change text color on hover */
+}
+
+#page31.in-view h1,
+#page31.in-view .line {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#page31.in-view .line:nth-child(1) {
+  animation: fadeInUp 1s ease-out forwards 0.3s; /* Delay the first line */
+}
+
+#page31.in-view .line:nth-child(2) {
+  animation: fadeInUp 1s ease-out forwards 0.6s; /* Delay the second line */
+}
+
+#page31.in-view .line:nth-child(3) {
+  animation: fadeInUp 1s ease-out forwards 0.9s; /* Delay the third line */
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#page31 {
+  position: relative;
+  z-index: 1; /* Ensure page content is in front of the canvas */
+}
+
+#page3top {
+  position: relative; /* Make sure the content stays on top of the canvas */
+  z-index: 2;
+}
+
+#page3elements {
+  position: relative; /* Same as above, for other elements */
+  z-index: 2;
+}
+
+.boxedelements {
+  position: relative;
+  z-index: 2; /* Keep the service box elements in front of the canvas */
+}
+
+#page3elements .boxedelements video {
+  opacity: 0;
+}
+
+#page3elements .boxedelements:hover img {
+  opacity: 0;
+}
+
+#page3elements .boxedelements:hover p {
+  opacity: 0;
+}
+
+#page3elements .boxedelements:hover video {
+  opacity: 1;
+}
+
+#page3op1 {
+  width: 100%;
+  position: relative;
+
+  padding: 3vw;
+}
+
+/* we vividhar */
+
+/* Image styling (right side) */
+.image {
+  flex: 1;
+  max-width: 50%; /* Adjust width as needed */
+}
+
+.image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes continuousRotate {
+  from {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+#rotated-image {
+  width: 485px; /* Sets a smaller width for the image */
+  /* border-radius: 10px; */
+  height: auto;
+  position: absolute;
+  right: 5%; /* Positions the image 20px from the right side */
+  top: 50%; /* Centers the image vertically */
+  transform-origin: center; /* Sets the rotation origin to the center of the image */
+  animation: continuousRotate 10s linear infinite; /* Rotates continuously */
+}
+
+/* new page 3  */
+/* Container styling */
+
+/* Content styling */
+.container .content {
+  color: #fff;
+  line-height: 1.75;
+  width: 600px;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  /* margin-top: ; */
+  text-align: justify;
+}
+
+/* Header styling */
+h1 {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0,  0,  0,  0.3);
+}
+
+/* Background animation */
+@keyframes backgroundAnimate {
+  0% {
+    background: linear-gradient(
+      135deg,
+      rgba(34, 115, 195, 0.3),
+      rgba(255, 255, 255, 0.703)
+    );
+  }
+  100% {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.703),
+      rgba(34, 115, 195, 0.3)
+    );
+  }
+}
+/* Footer Styles */
+footer {
+  color: #ecf0f1; /* Light text color */
+  padding: 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  margin-top: 30px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 100%;
+  position: relative;
+  left: 0;
+  right: 0;
+}
+
+footer .social_icon {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+footer .social_icon li a {
+  color: #ffffff;
+  font-size: 24px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social_icon li a:hover {
+  color: #90ee90;
+  transform: scale(1.1);
+}
+
+footer .menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+footer .menu li a {
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer .menu li a:hover {
+  color: #1abc9c;
+}
+
+footer .footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #7f8c8d;
+}

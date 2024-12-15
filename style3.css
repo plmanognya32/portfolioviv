@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #65708e;
+  overflow-y: auto;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+::selection {
+  background-color: black;
+  color: white;
+}
+
+body::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.wrapper {
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  font-size: 30px;
+  font-weight: 100;
+  background-color: #22A7F0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-wrapper {
+  padding: 20px 40px;
+  background: transparent; /* Semi-transparent blue */
+  /* backdrop-filter: blur(5px); Blur effect */
+  border-radius: 10px; /* Rounded corners */
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); Optional shadow for better contrast */
+  color: white; /* Text color for visibility */
+  font-weight: 100;
+  text-align: justify;
+  width: 70%;
+  margin-left: 15%;
+}
+
+section:nth-child(1) {
+  background: white;
+}
+
+section:nth-child(2) {
+  background: url(pics/waste-collection.webp);
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent white overlay */
+  background-blend-mode: multiply; /* Blend the background image with the color */
+}
+
+section:nth-child(3) {
+  background: url(pics/segregation.webp);
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
+  background-blend-mode: multiply; /* Blend the background image with the color */
+}
+
+section:nth-child(4) {
+  background: url(pics/bio-waste-milling.webp);
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: multiply;
+}
+
+section:nth-child(5) {
+  background: url(pics/composting-unit.png);
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: multiply;
+}
+
+section:nth-child(6) {
+  background: url(pics/torrefaction.webp);
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: multiply;
+}
+
+section:nth-child(7) {
+  background: url(pics/packaging.webp);
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: multiply;
+}
+
+.nav__wrapper {
+  position: fixed;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+
+.nav {
+  margin: 0 0 100px 30px;
+}
+
+.nav__counter {
+  font-size: 24px;
+  transition: all 0.15s ease-out;
+  font-weight: bold;
+}
+
+.nav__title {
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0 0 0.25em;
+  width: 300px;
+  height: 0;
+  overflow: hidden;
+  color: #90EE90;
+  opacity: 0;
+  transition: height 0.3s ease-out, opacity 0.2s ease-out;
+}
+
+.nav__body {
+  font-weight: 300;
+  font-size: 18px;
+  width: 300px;
+  height: 0;
+  overflow: hidden;
+  color: #ffffff;
+  opacity: 0;
+  transition: height 0.3s ease-out, opacity 0.2s ease-out;
+}
+
+.nav li {
+  position: relative;
+  transition: all 0.3s ease-out;
+  margin-bottom: 1em;
+}
+
+.nav li:after {
+  content: '';
+  display: block;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+  height: 250px;
+  width: 20px;
+  position: absolute;
+  left: -30px;
+  top: 15px;
+}
+
+.nav li a {
+  display: block;
+  padding: 0;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 0;
+  color: #fff;
+  transition: all 0.15s ease-out;
+}
+
+.nav li a:hover {
+  background-color: transparent;
+  padding-left: 1em;
+}
+
+.nav li a:focus {
+  background-color: transparent;
+}
+
+.nav li.active {
+  pointer-events: none;
+  padding-left: 1em;
+}
+
+.nav li.active:after {
+  width: 35px;
+  height: 400px;
+  top: 35px;
+}
+
+.nav li.active .nav__counter {
+  font-size: 48px;
+}
+
+.nav li.active .nav__title {
+  height: 40px;
+  opacity: 1;
+  overflow: visible;
+}
+
+.nav li.active .nav__body {
+  height: 100px;
+  opacity: 1;
+  overflow: visible;
+}
+
+/* Mobile Responsiveness */
+@media only screen and (max-width: 768px) {
+  .nav__wrapper {
+    position: fixed;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: 230px; /* Reduced height of the wrapper */
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.2); /* Add background for visibility */
+    z-index: 1;
+    display: flex; /* Align horizontally */
+    justify-content: flex-start; /* Align items to the left */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping of navigation items */
+  }
+
+  .nav {
+    display: flex; /* Align items horizontally */
+    flex-direction: row; /* Align items horizontally */
+    justify-content: flex-start; /* Align items to the left */
+    margin: 0;
+    padding: 0;
+    width: auto; /* Allow the nav to take width of its items */
+  }
+
+  .nav__counter, .nav__title, .nav__body {
+    font-size: 16px;
+    text-align: center;
+    width: auto; /* Allow text to resize dynamically */
+    margin-left: 0;
+  }
+
+  .content-wrapper {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 7%;
+    padding: 12px;
+    font-size: 20px; /* Smaller font size for mobile */
+  }
+
+  section {
+    font-size: 20px; /* Adjust font size for mobile */
+  }
+
+  .nav li {
+    margin-right: 1em; /* Space between nav items */
+    display: inline-block; /* Display list items inline */
+  }
+
+  .nav li:after {
+    left: 0;
+    top: 0;
+    height: 100px;
+    width: 3px;
+  }
+
+  .nav li a {
+    text-align: center;
+    padding: 1em;
+    font-size: 18px;
+  }
+
+  .nav li.active:after {
+    width: 20px;
+    height: 80px;
+    left: 10px;
+  }
+
+  /* Centering background images in responsive sections */
+  section:nth-child(2),
+  section:nth-child(3),
+  section:nth-child(4),
+  section:nth-child(5),
+  section:nth-child(6),
+  section:nth-child(7) {
+    background-position: center; /* Center the background image */
+    background-size: cover; /* Ensure the background image covers the entire section */
+  }
+
+  /* Special background for the first section */
+  section:nth-child(1) {
+    background: white;
+  }
+}
+
+
+
+@media only screen and (max-width: 480px) {
+  .content-wrapper {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  section {
+    font-size: 18px; /* Smaller font size for extra small screens */
+  }
+
+  .nav li:after {
+    height: 50px;
+  }
+}

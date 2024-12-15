@@ -1,0 +1,188 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  html,
+body {
+    height: 100%;
+    width: 100%;
+    color: #333;
+    line-height: 1.6;
+    overflow-y: scroll; /* Allow scrolling */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+html::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in WebKit-based browsers */
+}
+  
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+/* Intro Section Styling */
+.intro-section-floating {
+  margin: 10px auto;
+  width: 80%;
+  padding: 20px;
+  background: transparent;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  text-align: center;
+  color: #ffffff;
+}
+
+/*  */
+
+.intro-text {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+/* Content Container Styling */
+.content-container {
+  gap: 50px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Initial transition */
+}
+
+.content-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: transparent;
+  border-radius: 10px 50px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  overflow: hidden;
+}
+.content-card:hover {
+  transform: scale(1.1); /* Slightly enlarges the container */
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; /* Soft and subtle shadow */
+  transition: transform 0.4s ease, box-shadow 0.4s ease; /* Slower and smoother transition */
+}
+
+.content-card.reversed {
+  flex-direction: row-reverse;
+}
+/* 
+.card-image {
+  width: 100%;
+  height: 100%;
+  
+} */
+.card-image img {
+  width: 100%;
+  height: 100%;
+  max-width: 200px;
+  object-fit: cover;
+  
+}
+
+.card-text {
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-align: center; /* Center text inside */
+  flex: 1;
+  padding: 20px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+}
+/* Footer Styles */
+footer {
+  padding: 3px 5px; /* Reduced padding to shrink height */
+  text-align: center;
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+  border-radius: 0; /* No rounded corners for full-width footer */
+  position: relative; /* Allows the footer to remain in normal flow */
+  bottom: 0;
+}
+
+/* Social Media Icons */
+footer .social_icon {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Reduced gap between icons */
+  margin-bottom: 10px; /* Reduced bottom margin */
+}
+
+footer .social_icon li a {
+  color: #ffffff; /* Dark color for icons */
+  font-size: 20px; /* Slightly smaller icon size */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social_icon li a:hover {
+  color: #90ee90; /* Light green hover color */
+  transform: scale(1.1); /* Slight scale on hover */
+}
+
+/* Footer Navigation Menu */
+footer .menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Reduced gap between menu items */
+  margin: 5px 0;
+}
+
+footer .menu li a {
+  color: #ffffff; /* Dark color for text */
+  font-size: 14px; /* Slightly smaller font size */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer .menu li a:hover {
+  color: #90ee90; /* Light green hover color */
+}
+
+/* Footer Bottom Text */
+footer .footer-bottom {
+  margin-top: 10px; /* Reduced top margin */
+  font-size: 12px; /* Slightly smaller font size */
+  color: #7f8c8d; /* Lighter gray text for subtle footer text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  footer .social_icon {
+      flex-direction: column;
+      gap: 8px; /* Reduced gap in smaller screens */
+  }
+
+  footer .menu {
+      flex-direction: column;
+      gap: 8px; /* Reduced gap in smaller screens */
+  }
+}
+
+#page3top h2 {
+  text-align: center;
+  font-size: 36px; /* Adjust size as needed */
+  font-weight: 600;
+  margin: 20px 0;
+  margin-top: 5%;
+  color: #ffffff;
+}
+
